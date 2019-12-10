@@ -12,6 +12,7 @@ import { SearchshabuComponent } from './components/searchshabu/searchshabu.compo
 import { TopshabuComponent } from './components/topshabu/topshabu.component';
 import { MapshabuComponent } from './components/mapshabu/mapshabu.component';
 import { RateshabuComponent } from './components/rateshabu/rateshabu.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const appRoutes: Routes = [
   { path: '', component: AllshabuComponent },
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
   { path: 'searchshabu', component: SearchshabuComponent },
   { path: 'topshabu', component: TopshabuComponent },
   { path: 'mapshabu', component: MapshabuComponent },
-  { path: 'rateshabu', component: RateshabuComponent }
+  { path: 'rateshabu', component: RateshabuComponent },
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({
@@ -32,7 +34,8 @@ const appRoutes: Routes = [
     SearchshabuComponent,
     TopshabuComponent,
     MapshabuComponent,
-    RateshabuComponent
+    RateshabuComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
