@@ -1,4 +1,23 @@
 <div class="f">
+        <h1>{{title}}</h1>
+        <h3>{{description}}</h3>
+        <div style="width: 300px;">
+                <form (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                          <label for="item"> address</label>
+                          <input type="text" class="form-control" id="item" placeholder="Enter" 
+                           name="item" required>
+                          
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                
+        
+        </div>
+        <h2>result</h2>
+        <div class="col-md-3">
+            <pre *ngFor="let item of items | async">{{item.content}}</pre>
+        </div>
     <app-banner></app-banner>
     <app-navbar></app-navbar>
     <app-footer></app-footer>

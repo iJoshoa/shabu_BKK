@@ -15,11 +15,22 @@
     "@angular/common": "~8.2.3",
     "@angular/compiler": "~8.2.3",
     "@angular/core": "~8.2.3",
+    "@angular/fire": "^5.2.3",
     "@angular/forms": "~8.2.3",
     "@angular/platform-browser": "~8.2.3",
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
+    "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.4.1",
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "font-awesome": "^4.7.0",
+=======
+    "firebase": "^7.5.2",
+>>>>>>> 2d9459f5e0835dd196c1a431fe60ce26c9a335d8
+=======
+    "firebase": "^7.5.2",
+>>>>>>> 2d9459f5e0835dd196c1a431fe60ce26c9a335d8
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0",
     "rxjs": "~6.4.0",
