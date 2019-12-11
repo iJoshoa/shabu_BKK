@@ -22,15 +22,8 @@
     "@angular/router": "~8.2.3",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.4.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
+    "firebase": "^7.5.2",
     "font-awesome": "^4.7.0",
-=======
-    "firebase": "^7.5.2",
->>>>>>> 2d9459f5e0835dd196c1a431fe60ce26c9a335d8
-=======
-    "firebase": "^7.5.2",
->>>>>>> 2d9459f5e0835dd196c1a431fe60ce26c9a335d8
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0",
     "rxjs": "~6.4.0",
