@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { AngularFireDatabase } from "@angular/fire/database";
-import { Observable } from "rxjs";
+import { Observable, timer } from "rxjs";
 @Component({
   selector: "app-contact",
   templateUrl: "./contact.component.html",
@@ -31,7 +31,8 @@ export class ContactComponent implements OnInit {
       this.db.list("contact").push({
         name: this.nameValue,
         email: this.emailValue,
-        comment: this.textValue
+        comment: this.textValue,
+        date: new Date().getTime()
       });
       var element = document.getElementById("show");
       element.classList.add("alert-success");
