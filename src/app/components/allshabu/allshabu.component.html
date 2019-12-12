@@ -18,15 +18,16 @@
                                     <div class="card-body">
                                         <p class="lead">
                                             <li>{{item.s_comment}}</li>
+                                            <li>{{item.s_address}}</li>
                                         </p>
                                         <a href="{{item.s_gps}}"
                                             target="_blank"><i class="fa fa-map"></i> แผนที่ตั้งร้าน</a>
-                                        {{item.s_rate}}
+                                        <p class="text-right">คะแนน {{item.s_rate}}/5</p>
 
-                                        <div *ngFor="let x of star">
+                                        <!-- <div *ngFor="let x of star">
                                             
                                             <span class="fa fa-star checked"></span>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
