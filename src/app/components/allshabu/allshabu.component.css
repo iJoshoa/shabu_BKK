@@ -2,3 +2,9 @@
 .checked {
   color: orange;
 }
+.f{
+  font-family: 'Kanit', sans-serif;
+}
+.bc{
+  background-color: rgb(187, 235, 250);
+}
