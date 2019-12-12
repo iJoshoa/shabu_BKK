@@ -9,3 +9,16 @@ img {
     width: 100%;
     height: 500px;
   }
+  .bc {
+   margin-left: 1em;
+   background-color: yellow;
+   border-radius: 35%;
+  }
+  .csw {
+    color: white;
+    text-shadow: black 0.09em 0.05em 0.05em;
+  }
+  .csb {
+    color: black;
+    text-shadow: white 0.09em 0.09em 0.05em;
+  }
