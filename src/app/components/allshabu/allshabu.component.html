@@ -19,11 +19,13 @@
                                         <p class="lead">
                                             <li class="fa fa-money"> ราคา : {{item.s_price}}</li>
                                             <li class="fa fa-home"> ที่อยู่ : {{item.s_address}}</li>
-                                            <li class="fa fa-map"> แผ่นที่ : <a href="{{item.s_gps}}" target="_blank"><i
-                                                        ></i> คลิก</a></li>
+                                            <li class="fa fa-map"> แผ่นที่ : <a href="{{item.s_gps}}"
+                                                    target="_blank"><i></i> คลิก</a></li>
                                         </p>
+                                        <blockquote class="blockquote text-right">
+                                            <p class="mb-0">คะแนน {{item.s_rate}}/5</p>
+                                        </blockquote>
 
-                                        <p class="text-right">คะแนน {{item.s_rate}}/5</p>
 
                                         <!-- <div *ngFor="let x of star">
                                             
