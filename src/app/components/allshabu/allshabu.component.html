@@ -6,10 +6,10 @@
 
                     <h2 class="card-title text-center">ร้านทั้งหมด</h2>
                     <div *ngFor="let item of items | async">
-                        <div class="card mb-3">
+                        <div class="card mb-3" >
                             <div class="row no-gutters">
                                 <div class="col-md-4">
-                                    <img src="{{item.s_pic}}" class="card-img" alt="...">
+                                    <img src="{{item.s_pic}}" class="card-img img-fluid" style="height: 20;" alt="...">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-header bg-info text-white">
@@ -17,8 +17,8 @@
                                     </div>
                                     <div class="card-body">
                                         <p class="lead">
-                                            <li>{{item.s_comment}}</li>
-                                            <li>{{item.s_address}}</li>
+                                            <li>ราคา : {{item.s_price}}</li>
+                                            <li>ที่อยู่  :  {{item.s_address}}</li>
                                         </p>
                                         <a href="{{item.s_gps}}"
                                             target="_blank"><i class="fa fa-map"></i> แผนที่ตั้งร้าน</a>
