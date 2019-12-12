@@ -11,4 +11,8 @@ img {
   }
 
 
-
+.bimg{
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-shabu-shabu-hot-pot-banner-image_181550.jpg);
+    min-width: 100%;
+    min-height: 10%;
+}
