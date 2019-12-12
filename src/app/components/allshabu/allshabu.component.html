@@ -9,7 +9,7 @@
                         <div class="card mb-3">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
-                                    <img src="{{item.s_pic}}" class="card-img" alt="...">
+                                    <img src="{{item.s_pic}}" class="card-img img-fluid" style="height: 20;" alt="...">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-header bg-info text-white">
@@ -17,16 +17,20 @@
                                     </div>
                                     <div class="card-body">
                                         <p class="lead">
-                                            <li>{{item.s_comment}}</li>
+                                            <li class="fa fa-money"> ราคา : {{item.s_price}}</li>
+                                            <li class="fa fa-home"> ที่อยู่ : {{item.s_address}}</li>
+                                            <li class="fa fa-map"> แผ่นที่ : <a href="{{item.s_gps}}"
+                                                    target="_blank"><i></i> คลิก</a></li>
                                         </p>
-                                        <a href="{{item.s_gps}}"
-                                            target="_blank"><i class="fa fa-map"></i> แผนที่ตั้งร้าน</a>
-                                        {{item.s_rate}}
+                                        <blockquote class="blockquote text-right">
+                                            <p class="mb-0">คะแนน {{item.s_rate}}/5</p>
+                                        </blockquote>
 
-                                        <div *ngFor="let x of star">
+
+                                        <!-- <div *ngFor="let x of star">
                                             
                                             <span class="fa fa-star checked"></span>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
