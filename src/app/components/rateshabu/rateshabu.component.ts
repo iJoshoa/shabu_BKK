@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from "@angular/fire/database";
+import { Observable, timer } from "rxjs";
 
 @Component({
   selector: 'app-rateshabu',
@@ -6,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rateshabu.component.css']
 })
 export class RateshabuComponent implements OnInit {
-  range = [1, 2, 3];
-  constructor() { }
+  one = "";
+  two = "";
+  items :Observable<any[]>
+  constructor(public db : AngularFireDatabase) { 
+    this.items = db.list('shabushop').valueChanges();
+  }
+  onSubmit() {
+   console.log(this.one+ " " +this.two);
 
+  }
   ngOnInit() {
   }
 

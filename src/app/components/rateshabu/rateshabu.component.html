@@ -5,28 +5,34 @@
                 <div class="card-body">
 
                     <h2 class="card-title text-center">เรทราคา</h2>
-                    <div class="row">
-                        <div class="col-3"></div>
-                        <div class="col-3">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">฿</span>
+                    <form (ngSubmit)="onSubmit()">
+                        <div class="row">
+                            <div class="col-3"></div>
+
+                            <div class="col-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">฿</span>
+                                    </div>
+                                    <input type="number" class="form-control" name="o" [(ngModel)]="one" required>
                                 </div>
-                                <input type="text" class="form-control">
                             </div>
-                        </div>
-                        <h3 class="">-</h3>
-                         <div class="col-3">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">฿</span>
+                            <h3 class="">-</h3>
+                            <div class="col-3">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">฿</span>
+                                    </div>
+                                    <input type="number" class="form-control" name="t" [(ngModel)]="two" required>
                                 </div>
-                                <input type="text" class="form-control">
                             </div>
+                            <div class="col-3"></div>
                         </div>
-                        <div class="col-3"></div>
-                    </div>
-                    <div align="center"><button type="button" class="btn btn-primary btn-lg sizeb"><i class="fa fa-search"></i> ค้นหา</button></div>                    
+                        <!-- <div align="center">
+                            <button type="submit" class="btn btn-primary btn-lg sizeb" name="sent"><i class="fa fa-search"></i>
+                                ค้นหา</button>
+                        </div> -->
+                    </form>
                     <div class="row mar cen">
                         <div class="col-3"></div>
                         <div class="col-md-6">
@@ -34,28 +40,74 @@
                         <div class="col-3"></div>
                     </div>
 
-
-                    <div *ngFor="let data of range">
-                        <div class="card mb-3">
-                            <div class="row no-gutters">
-                                <div class="col-md-4">
-                                    <img src="https://img.wongnai.com/p/1920x0/2018/07/15/c7f0c42cd64f4bd798d092f05520e275.jpg"
-                                        class="card-img" alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-header bg-info text-white">
-                                        <p class="h5" style="margin-bottom: 0px;">ชื่อร้าน</p>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="lead">
-                                            <li>ข้อมูลร้าน</li>
-                                        </p>
-                                        <a href="#"><i class="fa fa-map"></i> แผนที่ตั้งร้าน</a>
+                    <div *ngFor="let item of items | async">
+                            <div *ngIf="item.s_price>=one && item.s_price<=two">
+                                <div class="card mb-3">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-4">
+                                            <img src="{{item.s_pic}}" class="card-img img-fluid" style="height: 20;"
+                                                alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-header bg-info text-white">
+                                                <p class="h5" style="margin-bottom: 0px;">{{item.s_name}}</p>
+                                            </div>
+                                            <div class="card-body">
+                                                <dl class="row lead">
+                                                    <dt class="col-sm-2"><i class="fa fa-money"></i> ราคา </dt>
+                                                    <dd class="col-sm-10">: {{item.s_price}}</dd>
+                                                    <dt class="col-sm-2"><i class="fa fa-home"></i> ที่อยู่ </dt>
+                                                    <dd class="col-sm-10">: {{item.s_address}}</dd>
+                                                    <dt class="col-sm-2"><i class="fa fa-phone-alt"></i> เบอร์โทร </dt>
+                                                    <dd class="col-sm-10">: {{item.s_tel}}</dd>
+                                                    <dt class="col-sm-2"><i class="fa fa-share-alt-square"></i> เว็บไซต์
+                                                    </dt>
+                                                    <dd class="col-sm-10">: <a href="{{item.s_social}}"
+                                                            target="_blank"><i></i>
+                                                            คลิก</a></dd>
+                                                    <dt class="col-sm-2"><i class="fa fa-map"></i> แผ่นที่ </dt>
+                                                    <dd class="col-sm-10">: <a href="{{item.s_gps}}" target="_blank"><i></i>
+                                                            คลิก</a></dd>
+                                                </dl>
+    
+                                                <blockquote class="blockquote text-right">
+                                                    <div *ngIf="item.s_rate==1">
+                                                        <span class="fa fa-star checked"></span>
+                                                    </div>
+                                                    <div *ngIf="item.s_rate==2">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                    </div>
+                                                    <div *ngIf="item.s_rate==3">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                    </div>
+                                                    <div *ngIf="item.s_rate==4">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                    </div>
+                                                    <div *ngIf="item.s_rate==5">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+    
+                                                    </div>
+                                                    <p class="mb-0">
+    
+                                                        {{item.s_rate}}/5 คะแนน</p>
+                                                </blockquote>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+    
                         </div>
-                    </div>
 
                 </div>
             </div>
